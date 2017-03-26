@@ -1,0 +1,143 @@
+/* CSS Document */
+.main_div_mid {
+    width: 610px;
+    margin: 0 auto;
+}
+.main_div_left {
+    width: 610px;
+    float: left;
+}
+.logo {
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.logo {
+    text-align: center;
+}
+.ums_logo {
+    width: 383px;
+    margin: 0 auto;
+    margin-top: 18px;
+    text-align: center;
+}
+.login_box {
+	width: 610px;
+	margin-top: 30px;
+	background:url(image/f_p.png);
+	float: left;
+	position: relative;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+	box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+	background-image: url(../login_images/login_bx_bg.png);
+	}
+	.red_box {
+    background: #e04a31;
+    margin-top: 10px;
+    height: 52px;
+    width: 17px;
+    float: left;
+}
+.sign_in {
+    color: rgb(224, 74, 49);
+    float: left;
+    font-family: 'segoe_uilight';
+    font-size: 35px;
+    margin-top: 13px;
+    padding-left: 15px;
+}
+.table {
+    width: 610px;
+    float: left;
+}
+.login_tbl td input, .login_tbl td select {
+    float: left;
+}
+.input_type {
+    width: 75%;
+    padding-right: 30px;
+    background: #f8f8f8;
+    padding-left: 5px;
+    height: 36px;
+    font-size: 20px;
+    color: #919191;
+    border: none;
+    font-family: 'segoe_uilight';
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    background: url(../login_images/user_icon.png) right no-repeat #f8f8f8;
+}
+element {
+    color: Red;
+    visibility: hidden;
+}
+.login_tbl td span {
+    float: left;
+}
+.login_tbl span {
+    background-color: #7CAF00;
+    float: right;
+    margin-top: 0;
+    border-bottom: 2px solid #000;
+}
+element {
+    color: Red;
+    visibility: hidden;
+}
+.login_tbl td input, .login_tbl td select {
+    float: left;
+}
+.input_type_pass {
+    width: 75%;
+    background: #f8f8f8;
+    padding-right: 30px;
+    padding-left: 5px;
+    height: 36px;
+    font-size: 20px;
+    color: #919191;
+    border: none;
+    font-family: 'segoe_uilight';
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    background: url(../login_images/password_icon.png) right no-repeat #f8f8f8;
+}
+.login_tbl td input, .login_tbl td select {
+    float: left;
+}
+.select_ums {
+    width: 89%;
+    padding-left: 5px;
+    background: #f8f8f8;
+    height: 36px;
+    font-size: 20px;
+    font-family: 'segoe_uilight';
+    color: #919191;
+    border: none;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+}
+.select_ums {
+    font-size: 20px;
+    font-family: 'segoe_uilight';
+    color: #919191;
+}
+.login_button {
+    position: absolute;
+    bottom: -40px;
+    left: 267px;
+}
+element {
+    height: 73px;
+    width: 73px;
+    border-width: 0px;
+}
+.forget_password {
+    position: absolute;
+    bottom: -55px;
+    left: 0px;
+}
