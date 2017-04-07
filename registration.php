@@ -13,29 +13,29 @@
     if (isset($_REQUEST['email'])){
 		$first_name = stripslashes($_REQUEST['first_name']); // removes backslashes
 		$first_name = mysqli_real_escape_string($con,$first_name); //escapes special characters in a string
-		$last_name = stripslashes($_REQUEST['last_name']);
+		$last_name = stripslashes($_REQUEST['last_name']); // removes backslashes
 		$last_name = mysqli_real_escape_string($con,$last_name);
-		$dob = stripslashes($_REQUEST['dob']);
+		$dob = stripslashes($_REQUEST['dob']); // removes backslashes
 		$dob = mysqli_real_escape_string($con,$dob);
-		$gender = stripslashes($_REQUEST['gender']);
+		$gender = stripslashes($_REQUEST['gender']); // removes backslashes
 		$gender = mysqli_real_escape_string($con,$gender);
 		$email = stripslashes($_REQUEST['email']);
 		$email = mysqli_real_escape_string($con,$email);
 		$password = stripslashes($_REQUEST['password']);
 		$password = mysqli_real_escape_string($con,$password);
-		$mobile = stripslashes($_REQUEST['mobile']); 
+		$mobile = stripslashes($_REQUEST['mobile']); // removes backslashes
 		$mobile = mysqli_real_escape_string($con,$mobile);
-		$address = stripslashes($_REQUEST['address']);
+		$address = stripslashes($_REQUEST['address']); // removes backslashes
 		$address = mysqli_real_escape_string($con,$address);
-		$current_rollno = stripslashes($_REQUEST['current_rollno']);
+		$current_rollno = stripslashes($_REQUEST['current_rollno']); // removes backslashes
 		$current_rollno = mysqli_real_escape_string($con,$current_rollno);
-		$university_rollno = stripslashes($_REQUEST['university_rollno']);
+		$university_rollno = stripslashes($_REQUEST['university_rollno']); // removes backslashes
 		$university_rollno = mysqli_real_escape_string($con,$university_rollno);
-		$current_semester = stripslashes($_REQUEST['current_semester']);
+		$current_semester = stripslashes($_REQUEST['current_semester']); // removes backslashes
 		$current_semester = mysqli_real_escape_string($con,$current_semester);
-		$role_id = stripslashes($_REQUEST['role_id']);
+		$role_id = stripslashes($_REQUEST['role_id']); // removes backslashes
 		$role_id = mysqli_real_escape_string($con,$role_id);
-		$adhaar_no = stripslashes($_REQUEST['adhaar_no']);
+		$adhaar_no = stripslashes($_REQUEST['adhaar_no']); // removes backslashes
 		$adhaar_no = mysqli_real_escape_string($con,$adhaar_no);
         $query = "INSERT into `users` (first_name, last_name, dob, gender,  password, email, mobile, adhaar_no, address, current_rollno, current_semester, university_rollno, role_id ) VALUES ('$first_name', $'last_name', $'dob, gender', $'mobile', $'adhaar_no', $'address', $'current_rollno', $'current_semester', $'university_rollno', $'role_id', '".md5($password)."', '$email')";
         $result = mysqli_query($con,$query);
@@ -181,13 +181,19 @@
 	 <tr>
 	<td><h3>Password</h3></td>
 	<td><input name="password" type="password" value="Password" class="input_type_pass" /></td></tr>
-	<tr><td> <h3>Mobile</h3></td>><td><input name="mobile" type="text" value="Mobile No." class="input_type" /></td></tr>
-	<tr><td><h3>Adhaar No.</h3></td><td><input name="adhaar_no" type="text" class="input_type" id="adhaar_no" value="Adhaar No." /></td></tr>
-	<tr><td><h3>Address</h3></td><td><textarea name="address" cols="" rows="" class="input_type">Address</textarea></td></tr>
-	<tr><td><h3>Current Roll No.</h3></td><td><input name="current_rollno" type="text" value="Current RollNo." class="input_type" /></td></tr>
-	<tr><td><h3>University Roll No.</h3></td><td><input name="university_rollno" type="text" value="University Roll No." class="input_type" /></td></tr>
+	<tr><td> <h3>Mobile</h3></td>>
+	<td><input name="mobile" type="text" value="Mobile No." class="input_type" /></td></tr>
+	<tr><td><h3>Adhaar No.</h3></td>
+	<td><input name="adhaar_no" type="text" class="input_type" id="adhaar_no" value="Adhaar No." /></td></tr>
+	<tr><td><h3>Address</h3></td>
+	<td><textarea name="address" cols="" rows="" class="input_type">Address</textarea></td></tr>
+	<tr><td><h3>Current Roll No.</h3></td>
+	<td><input name="current_rollno" type="text" value="Current RollNo." class="input_type" /></td></tr>
+	<tr><td><h3>University Roll No.</h3></td>
+	<td><input name="university_rollno" type="text" value="University Roll No." class="input_type" /></td></tr>
 	<tr>
-	<td><h3>Current Semester</h3></td><td><select name="current_semester" class="select_ums" id="current_semester">
+	<td><h3>Current Semester</h3></td>
+	<td><select name="current_semester" class="select_ums" id="current_semester">
 	  <option>Select Semester</option>
 	  <option>I</option>
 	  <option>II</option>
@@ -206,8 +212,9 @@
 	  <option>Admin</option>
 	  <option>Student</option>
 	  <option>Staff</option>
-	</select>
-	</table>
- </div></div></form></div>
+	</select></td></tr></table>
+ </div>
+ </div>
+ </form> </div>
 </body>
 </html>
