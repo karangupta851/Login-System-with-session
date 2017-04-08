@@ -58,15 +58,15 @@
   <table align="center" width="100%" border="0" cellspacing="30" cellpadding="0" class="login_tbl">
     <tr>
       <td height="41"><h3>First Name</h3></td>
-      <td><input name="first_name" type="text" class="input_type" value="First Name" maxlength="50" required/></td>
+      <td><input type="text" name="first_name" placeholder="First Name" class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td height="41"><h3>Last Name</h3></td>
-      <td><input name="last_name" type="text" class="input_type" value="Last Name" maxlength="50" required/></td>
+      <td><input type="text" name="last_name" placeholder="Last Name" class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td height="41"><h3>Date Of Birth</h3></td>
-      <td><select size="1" name="dob" value="date" class="select_ums">
+      <td><select size="1" name="dob" value="date" class="select_ums" required>
           <option>Date</option>
           <option>1</option>
           <option>2</option>
@@ -100,7 +100,7 @@
           <option>30</option>
           <option>31</option>
         </select>
-          <select size="1" name="select" value="month" class="select_ums">
+          <select size="1" name="dob" value="month" class="select_ums" required>
             <option>Month</option>
             <option>Jan</option>
             <option>Feb</option>
@@ -115,7 +115,7 @@
             <option>Nov</option>
             <option>Dec</option>
           </select>
-          <select size="1" name="select2" value="Year" class="select_ums">
+          <select size="1" name="dob" value="Year" class="select_ums" required>
             <option>Year</option>
             <option>1980</option>
             <option>1981</option>
@@ -176,36 +176,36 @@
     </tr>
     <tr>
       <td><h3>E-mail</h3></td>
-      <td><input name="email" type="text" value="Email" class="input_type" /></td>
+      <td><input type="text" name="email" placeholder="E-mail" class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Password</h3></td>
-      <td><input name="password" type="password" value="Password" class="input_type_pass" /></td>
+      <td><input type="password" name="password" placeholder="Password" class="input_type_pass" required /></td>
     </tr>
     <tr>
       <td><h3>Mobile</h3></td>
       >
-      <td><input name="mobile" type="text" value="Mobile No." class="input_type" /></td>
+      <td><input type="text" name="mobile" placeholder="Phone No." class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Adhaar No.</h3></td>
-      <td><input name="adhaar_no" type="text" class="input_type" id="adhaar_no" value="Adhaar No." /></td>
+      <td><input type="text" name="adhaar_no" placeholder="Adhaar No." class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Address</h3></td>
-      <td><textarea name="address" cols="" rows="" class="input_type">Address</textarea></td>
+      <td><textarea name="address" cols="" rows="" class="input_type" required placeholder="Address"></textarea></td>
     </tr>
     <tr>
       <td><h3>Current Roll No.</h3></td>
-      <td><input name="current_rollno" type="text" value="Current RollNo." class="input_type" /></td>
+      <td><input type="text" name="current_rollno" placeholder="Current Roll No." class="input_type" required /></td>
     </tr>
     <tr>
       <td><h3>University Roll No.</h3></td>
-      <td><input name="university_rollno" type="text" value="University Roll No." class="input_type" /></td>
+      <td><input type="text" name="university_rollno" placeholder="University Roll no." class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Current Semester</h3></td>
-      <td><select name="current_semester" class="select_ums" id="current_semester">
+      <td><select name="current_semester" class="select_ums" id="current_semester" required>
           <option>Select Semester</option>
           <option>I</option>
           <option>II</option>
@@ -220,7 +220,7 @@
     </tr>
     <tr>
       <td><h3>Admin Type</h3></td>
-      <td><select name="role_id" class="select_ums">
+      <td><select name="role_id" class="select_ums" required>
           <option>Select Type</option>
           <option>Admin</option>
           <option>Student</option>
@@ -233,6 +233,7 @@
   </tr>
   </table>
 </div>
+</form></div>
 <?php } ?>
 </body>
 </html>
