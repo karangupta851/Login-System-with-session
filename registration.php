@@ -9,29 +9,22 @@
 <body background="../../../Users/KARAN/Downloads/main-background1.jpg">
 <?php
 	require('db.php');
-    // Escape user inputs for security
+    // If form submitted, insert values into the database.
+    if (isset($_REQUEST['username'])){
+		$username = stripslashes($_REQUEST['username']); // removes backslashes
+		$username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
+		$email = stripslashes($_REQUEST['email']);
+		$email = mysqli_real_escape_string($con,$email);
+		$password = stripslashes($_REQUEST['password']);
+		$password = mysqli_real_escape_string($con,$password);
 
-$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
-$last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
-$dob = mysqli_real_escape_string($link, $_REQUEST['dob']);
-$email = mysqli_real_escape_string($link, $_REQUEST['email']);
-$mobile = mysqli_real_escape_string($link, $_REQUEST['mobile']);
-$gender = mysqli_real_escape_string($link, $_REQUEST['gender']);
-$password = mysqli_real_escape_string($link, $_REQUEST['.md5("password")']);
-$current_rollno = mysqli_real_escape_string($link, $_REQUEST['current_rollno']);
-$current_semester = mysqli_real_escape_string($link, $_REQUEST['current_semester']);
-$role_id = mysqli_real_escape_string($link, $_REQUEST['role_id']);
-$adhaar_no = mysqli_real_escape_string($link, $_REQUEST['adhaar_no']);
-$img = mysqli_real_escape_string($link, $_REQUEST['img']);
-$address = mysqli_real_escape_string($link, $_REQUEST['address']);
-$university_rollno = mysqli_real_escape_string($link, $_REQUEST['university_rollno']);
-// attempt insert query execution
-$sql = "INSERT INTO reg (first_name, last_name, dob, email, [.md5('password')], mobile, gender, current_semester, current_rollno, role_id, adhaar_no, img, address, university_rollno) VALUES ('$first_name', '$last_name','$password', '$dob', '$email', '$mobile', '$gender', '$adhaar_no', '$role_id, '$university_rollno', '$current_rollno', '$current_semester', '$img', '$address')";
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
+		$trn_date = date("Y-m-d H:i:s");
+        $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+        $result = mysqli_query($con,$query);
+        if($result){
+            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
+        }
+    }else{
 ?>
 <div class="logo">
 <img src="image/logo3.png" />
@@ -202,11 +195,7 @@ if(mysqli_query($link, $sql)){
 	  <option>Student</option>
 	  <option>Staff</option>
 	</select></td></tr>
-	<tr><td>
-	</table>
- </div>
- </div>
- </form> </div>
+	</table></div>
 <?php } ?>
 </body>
 </html>
