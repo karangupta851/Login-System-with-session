@@ -207,5 +207,6 @@ if(mysqli_query($link, $sql)){
  </div>
  </div>
  </form> </div>
+<?php } ?>
 </body>
 </html>
