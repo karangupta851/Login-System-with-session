@@ -6,20 +6,38 @@
 <link rel="icon" href="image/logo3.png" type="image/png">
 <link rel="stylesheet" href="CSS/style.css" />
 </head>
-<body background="../../../Users/KARAN/Downloads/main-background1.jpg">
+<body background="image/main-background1.jpg">
 <?php
 	require('db.php');
     // If form submitted, insert values into the database.
-    if (isset($_REQUEST['username'])){
-		$username = stripslashes($_REQUEST['username']); // removes backslashes
-		$username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
+    if (isset($_REQUEST['email'])){
+		$first_name = stripslashes($_REQUEST['first_name']); // removes backslashes
+		$first_name = mysqli_real_escape_string($con,$first_name); //escapes special characters in a string
+		$last_name = stripslashes($_REQUEST['last_name']);
+		$last_name = mysqli_real_escape_string($con,$last_name);
 		$email = stripslashes($_REQUEST['email']);
 		$email = mysqli_real_escape_string($con,$email);
 		$password = stripslashes($_REQUEST['password']);
 		$password = mysqli_real_escape_string($con,$password);
-
-		$trn_date = date("Y-m-d H:i:s");
-        $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+		$dob = stripslashes($_REQUEST['dob']);
+		$dob = mysqli_real_escape_string($con,$dob);
+		$gender = stripslashes($_REQUEST['gender']);
+		$gender = mysqli_real_escape_string($con,$gender);
+		$mobile = stripslashes($_REQUEST['mobile']);
+		$mobile = mysqli_real_escape_string($con,$mobile);
+		$adhaar_no = stripslashes($_REQUEST['adhaar_no']);
+		$adhaar_no = mysqli_real_escape_string($con,$adhaar_no);
+		$address = stripslashes($_REQUEST['address']);
+		$address = mysqli_real_escape_string($con,$address);
+		$current_semester = stripslashes($_REQUEST['current_semester']);
+		$current_semester = mysqli_real_escape_string($con,$current_semester);
+		$current_rollno = stripslashes($_REQUEST['current_rollno']);
+		$current_rollno = mysqli_real_escape_string($con,$current_rollno);
+		$role_id = stripslashes($_REQUEST['role_id']);
+		$role_id = mysqli_real_escape_string($con,$role_id);
+		$university_rollno = stripslashes($_REQUEST['university_rollno']);
+		$university_rollno = mysqli_real_escape_string($con,$university_rollno);
+        $query = "INSERT into `users` (first_name, last_name, password, email, university_rollno, role_id, current_rollno, current_semester, address, adhaar_no, mobile, gender, dob) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$university_rollno', '$role_id', '$current_rollno', '$current_semester', '$address', '$adhaar_no', '$mobile', '$gender', '$dob',  )";
         $result = mysqli_query($con,$query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
@@ -44,7 +62,7 @@
   <input name="first_name" type="text" class="input_type" value="First Name" maxlength="50" required/></td>
   </tr>
     <tr>
-  <td height="41"><h3>Lirst Name</h3></td>
+  <td height="41"><h3>Last Name</h3></td>
   <td>
   <input name="last_name" type="text" class="input_type" value="Last Name" maxlength="50" required/></td>
   </tr>
