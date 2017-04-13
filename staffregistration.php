@@ -189,8 +189,8 @@
       <td><textarea name="address" cols="" rows="" class="input_type" required placeholder="Address"></textarea></td>
     </tr>
 	<tr>
-      <td><h3>Current Roll No.</h3></td>
-      <td><input type="text" name="current_rollno" placeholder="Current Roll No." class="input_type" required /></td>
+      <td><h3>Salary</h3></td>
+      <td><input type="text" name="salary" placeholder="Salary" class="input_type" required /></td>
     </tr><tr>
   <td><div class="login_button">
     <input type="image" name="register" id="register" src="image/Register-Button-PNG-Free-Download.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
