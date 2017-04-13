@@ -32,7 +32,7 @@
         $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob',)";
         $result = mysqli_query($con,$query);
         if($result){
-            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
+            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
         }
     }else{
 ?>
