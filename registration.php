@@ -10,7 +10,7 @@
 <?php
 	require('db.php');
     // If form submitted, insert values into the database.
-    if (isset($_REQUEST['first_name'])){
+    if (isset($_REQUEST['email'])){
 		$first_name = stripslashes($_REQUEST['first_name']); // removes backslashes
 		$first_name = mysqli_real_escape_string($con,$first_name); //escapes special characters in a string
 		$last_name = stripslashes($_REQUEST['last_name']);
@@ -29,19 +29,14 @@
 		$adhaar_no = mysqli_real_escape_string($con,$adhaar_no);
 		$address = stripslashes($_REQUEST['address']);
 		$address = mysqli_real_escape_string($con,$address);
-		$current_semester = stripslashes($_REQUEST['current_semester']);
-		$current_semester = mysqli_real_escape_string($con,$current_semester);
-		$current_rollno = stripslashes($_REQUEST['current_rollno']);
-		$current_rollno = mysqli_real_escape_string($con,$current_rollno);
-		$university_rollno = stripslashes($_REQUEST['university_rollno']);
-		$university_rollno = mysqli_real_escape_string($con,$university_rollno);
-        $query = "INSERT into `users` (first_name, last_name, password, email, university_rollno, current_rollno, current_semester, address, adhaar_no, mobile, gender, dob) VALUES ('$first_name', '$last_name', '".md5($password)."', '$email', '$university_rollno', '$current_rollno', '$current_semester', '$address', '$adhaar_no', '$mobile', '$gender', '$dob',  )";
-        $result = mysqli_query($con,$query);
+	    	$salary = stripslashes($_REQUEST['salary']);
+		$salary = mysqli_real_escape_string($con,$salary);
+        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, salary) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', '$salary')";
+        $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
-        }
-    }else{
-	    //this will show you the error 
+        }else{
+            //this will show you the error 
             printf("%s\n", $con->error);
             exit();
         }
@@ -69,7 +64,9 @@
     </tr>
     <tr>
       <td height="41"><h3>Date Of Birth</h3></td>
-      <td><input type="date" name="dob" class="select_ums" required /></td>
+      <td>
+      <input type="date" name="dob" class="select_ums" required />
+	    </td>
     </tr>
     <tr>
       <td><h3>Gender</h3></td>
@@ -80,7 +77,7 @@
     </tr>
     <tr>
       <td><h3>E-mail</h3></td>
-      <td><input type="email" name="email" placeholder="E-mail" class="input_type" required="required" /></td>
+      <td><input type="text" name="email" placeholder="E-mail" class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Password</h3></td>
@@ -98,15 +95,15 @@
       <td><h3>Address</h3></td>
       <td><textarea name="address" cols="" rows="" class="input_type" required placeholder="Address"></textarea></td>
     </tr>
-    <tr>
+	<tr>
       <td><h3>Current Roll No.</h3></td>
       <td><input type="text" name="current_rollno" placeholder="Current Roll No." class="input_type" required /></td>
     </tr>
-    <tr>
+	  <tr>
       <td><h3>University Roll No.</h3></td>
       <td><input type="text" name="university_rollno" placeholder="University Roll no." class="input_type" required="required" /></td>
     </tr>
-    <tr>
+	   <tr>
       <td><h3>Current Semester</h3></td>
       <td><select name="current_semester" class="select_ums" id="current_semester" required>
           <option>Select Semester</option>
@@ -121,14 +118,15 @@
         </select>
       </td>
     </tr>
+	  <tr>
   <td><div class="login_button">
-    <input type="image" name="submit" id="submit" src="image/Register-Button-PNG-Free-Download.png" alt="submit" style="height:80px;width:130px;border-width:0px; " />
+    <input type="image" name="register" id="register" src="image/Register-Button-PNG-Free-Download.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
   </div></td>
   </tr>
   </table>
   </div>
 </div>
+</form></div>
 <?php } ?>
-</form>
 </body>
 </html>
