@@ -24,13 +24,17 @@
 		$rows = mysqli_num_rows($result);
         if($rows==1){
 			$_SESSION['email'] = $email;
-			header("Location: dashboard.php"); // Redirect user to index.php
-            }else{
-		 //this will show you the error 
-            printf("%s\n", $con->error);
-            exit();
-    }else{
-?>
+			
+         echo '<script type="text/javascript"> window.open("dashboard.php","_self");</script>';            //  On Successful Login redirects to home.php
+
+        }
+
+        else
+        {
+            echo "invalid UserName or Password";        
+        }
+}
+ ?>
 <div class="form">
 <div id="main">
 </div>
