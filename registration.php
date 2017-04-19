@@ -41,6 +41,11 @@
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
         }
     }else{
+	    //this will show you the error 
+            printf("%s\n", $con->error);
+            exit();
+        }
+    }else{
 ?>
 <div class="logo">
 <img src="image/logo3.png" />
