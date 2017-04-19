@@ -25,16 +25,14 @@
         if($rows==1){
 			$_SESSION['email'] = $email;
 			
-         echo '<script type="text/javascript"> window.open("dashboard.php","_self");</script>';            //  On Successful Login redirects to home.php
-
-        }
-
-        else
-        {
-            echo "invalid UserName or Password";        
-        }
+ header("location: dashboard.php");
 }
- ?>
+else
+{
+$error="Your Login Name or Password is invalid";
+}
+}
+?>
 <div class="form">
 <div id="main">
 </div>
