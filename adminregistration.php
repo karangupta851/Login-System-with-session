@@ -23,15 +23,7 @@
 		$dob = mysqli_real_escape_string($con,$dob);
 		$gender = stripslashes($_REQUEST['gender']);
 		$gender = mysqli_real_escape_string($con,$gender);
-		$mobile = stripslashes($_REQUEST['mobile']);
-		$mobile = mysqli_real_escape_string($con,$mobile);
-		$adhaar_no = stripslashes($_REQUEST['adhaar_no']);
-		$adhaar_no = mysqli_real_escape_string($con,$adhaar_no);
-		$address = stripslashes($_REQUEST['address']);
-		$address = mysqli_real_escape_string($con,$address);
-	    	$salary = stripslashes($_REQUEST['salary']);
-		$salary = mysqli_real_escape_string($con,$salary);
-        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, salary) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', '$salary')";
+        $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$gender', '$dob')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
