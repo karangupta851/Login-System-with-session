@@ -65,7 +65,7 @@
     <tr>
       <td height="41"><h3>Date Of Birth</h3></td>
       <td>
-      <input type="date" name="dob" required />
+      <input type="date" name="dob" class="select_ums" required />
 	    </td>
     </tr>
     <tr>
