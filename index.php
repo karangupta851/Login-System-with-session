@@ -29,8 +29,6 @@
 		 //this will show you the error 
             printf("%s\n", $con->error);
             exit();
-				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
-				}
     }else{
 ?>
 <div class="form">
