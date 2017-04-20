@@ -23,7 +23,9 @@
 		$dob = mysqli_real_escape_string($con,$dob);
 		$gender = stripslashes($_REQUEST['gender']);
 		$gender = mysqli_real_escape_string($con,$gender);
-        $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$gender', '$dob')";
+	        $roles_id = stripslashes($_REQUEST['roles_id']);
+		$roles_id = mysqli_real_escape_string($con,$roles_id);
+        $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob, roles_id) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$gender', '$roles_id', '$dob')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
@@ -75,6 +77,8 @@
       <td><h3>Password</h3></td>
       <td><input type="password" name="password" placeholder="Password" class="input_type_pass" required /></td>
     </tr>
+	  <tr><td>
+	<input type="hidden" name="roles_id" value="1" /></td></tr>
 	  <tr>
   <td><div class="login_button">
     <input type="image" name="register" id="register" src="image/Register-Button-PNG-Free-Download.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
