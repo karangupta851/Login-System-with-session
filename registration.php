@@ -37,7 +37,7 @@
 		$current_semester = mysqli_real_escape_string($con,$current_semester);
 	    	$roles_id = stripslashes($_REQUEST['roles_id']);
 		$roles_id = mysqli_real_escape_string($con,$roles_id);
-        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, current_rollno, university_rollno, current_semester, roles_id) VALUES ('$first_name', '$last_name', '".md5($password)."', '$email', '$mobile', '$gender', '$dob', '$adhaar_no', '$address', '$current_rollno', '$current_semester', '$university_rollno', '$roles_id')";
+        $query = "INSERT into `users` (first_name, last_name, email, password, dob, gender, mobile, adhaar_no, address, current_rollno, university_rollno, current_semester, roles_id) VALUES ('$first_name', '$last_name', '".md5($password)."', '$email', '$mobile', '$dob', '$gender', '$adhaar_no', '$address', '$current_rollno', '$current_semester', '$university_rollno', '$roles_id')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
