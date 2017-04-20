@@ -31,7 +31,9 @@
 		$address = mysqli_real_escape_string($con,$address);
 	    	$salary = stripslashes($_REQUEST['salary']);
 		$salary = mysqli_real_escape_string($con,$salary);
-        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, salary) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', '$salary')";
+	    	$roles_id = stripslashes($_REQUEST['roles_id']);
+		$roles_id = mysqli_real_escape_string($con,$roles_id);
+        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, salary, roles_id) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', '$salary', '$roles_id')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
@@ -98,7 +100,10 @@
 	<tr>
       <td><h3>Salary</h3></td>
       <td><input type="text" name="salary" placeholder="Salary" class="input_type" required /></td>
-    </tr><tr>
+    </tr>
+	  <tr><td>
+	<input type="hidden" name="roles_id" value="2" /></td></tr>
+	  <tr>
   <td><div class="login_button">
     <input type="image" name="register" id="register" src="image/Register-Button-PNG-Free-Download.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
   </div></td>
