@@ -35,7 +35,9 @@
 		$university_rollno = mysqli_real_escape_string($con,$university_rollno);
 	    	$current_semester = stripslashes($_REQUEST['current_semester']);
 		$current_semester = mysqli_real_escape_string($con,$current_semester);
-        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, current_rollno, university_rollno, current_semester) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', 'current_rollno', 'university_rollno', '$current_semester')";
+	        $roles_id = stripslashes($_REQUEST['roles_id']);
+		$roles_id = mysqli_real_escape_string($con,$roles_id);
+        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, current_rollno, roles_id, university_rollno, current_semester) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '&roles_id', '$mobile', '$gender', '$dob', 'current_rollno', 'university_rollno', '$current_semester')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
@@ -122,6 +124,8 @@
         </select>
       </td>
     </tr>
+	  <tr><td>
+	<input type="hidden" name="roles_id" value="3" /></td></tr>
 	  <tr>
   <td><div class="login_button">
     <input type="image" name="register" id="register" src="image/Register-Button-PNG-Free-Download.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
