@@ -25,7 +25,7 @@
 		$gender = mysqli_real_escape_string($con,$gender);
 	    	$roles_id = stripslashes($_REQUEST['roles_id']);
 		$roles_id = mysqli_real_escape_string($con,$roles_id);
-        $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob, roles_id) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$gender', '$dob', '$roles_id')";
+        $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob, roles_id) VALUES ('$first_name', '$last_name', '".md5($password)."', '$email', '$gender', '$dob', '$roles_id')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
