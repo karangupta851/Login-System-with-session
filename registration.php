@@ -35,9 +35,9 @@
 		$university_rollno = mysqli_real_escape_string($con,$university_rollno);
 	    	$current_semester = stripslashes($_REQUEST['current_semester']);
 		$current_semester = mysqli_real_escape_string($con,$current_semester);
-	        $roles_id = stripslashes($_REQUEST['roles_id']);
+	    	$roles_id = stripslashes($_REQUEST['roles_id']);
 		$roles_id = mysqli_real_escape_string($con,$roles_id);
-        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, current_rollno, roles_id, university_rollno, current_semester) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '&roles_id', '$mobile', '$gender', '$dob', 'current_rollno', 'university_rollno', '$current_semester')";
+        $query = "INSERT into `users` (first_name, last_name, password, email, address, adhaar_no, mobile, gender, dob, salary, roles_id) VALUES ('$first_name', 'last_name', '".md5($password)."', '$email', '$address', '$adhaar_no', '$mobile', '$gender', '$dob', '$salary', '$roles_id')";
         $result = $con->query($query);
         if($result){
             echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
@@ -101,7 +101,7 @@
       <td><h3>Address</h3></td>
       <td><textarea name="address" cols="" rows="" class="input_type" required placeholder="Address"></textarea></td>
     </tr>
-	<tr>
+		<tr>
       <td><h3>Current Roll No.</h3></td>
       <td><input type="text" name="current_rollno" placeholder="Current Roll No." class="input_type" required /></td>
     </tr>
