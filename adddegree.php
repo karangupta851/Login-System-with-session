@@ -18,7 +18,7 @@
         $query = "INSERT into `degrees` (name, duration) VALUES ('$name', '$duration')";
         $result = $con->query($query);
         if($result){
-            echo "<div class='form'><h3>degree registered successfully.</h3><br/>Click here to <a href='dashboard.php'>Dashboard</a></div>";
+            echo "<div class='form'><h1>degree registered successfully.</h1><br/><h1>Click here to </h1><a href='dashboard.php'><h1>Dashboard</h1></a></div>";
         }else{
             //this will show you the error 
             printf("%s\n", $con->error);
@@ -46,7 +46,7 @@
       <td><input name="name" type="text" class="input_type" id="name" placeholder="Degree Name" required="required" /></td>
     </tr>
     <tr>
-      <td height="41"><h3>Duration in years </h3></td>
+      <td height="41"><h3>Duration </h3></td>
       <td><input name="duration" type="text" class="input_type" id="duration" placeholder="Duration" required="required" /></td>
     </tr>
 	  <tr>
