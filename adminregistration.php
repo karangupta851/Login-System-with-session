@@ -28,7 +28,7 @@
         $query = "INSERT into `users` (first_name, last_name, password, email, gender, dob, roles_id) VALUES ('$first_name', '$last_name', '".md5($password)."', '$email', '$gender', '$dob', '$roles_id')";
         $result = $con->query($query);
         if($result){
-            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
+            echo "<div class='form'><h1>You are registered successfully.</h1><br/><h1>Click here to </h1><a href='index.php'><h1>Login</h1></a></div>";
         }else{
             //this will show you the error 
             printf("%s\n", $con->error);
@@ -71,7 +71,7 @@
     </tr>
     <tr>
       <td><h3>E-mail</h3></td>
-      <td><input type="text" name="email" placeholder="E-mail" class="input_type" required="required" /></td>
+      <td><input type="email" name="email" placeholder="E-mail" class="input_type" required="required" /></td>
     </tr>
     <tr>
       <td><h3>Password</h3></td>
