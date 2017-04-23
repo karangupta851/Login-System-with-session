@@ -49,7 +49,7 @@
       </select></td>
     </tr>
     <tr>
-      <td height="41"><h3>Ccourse Name </h3></td>
+      <td height="41"><h3>Course Name </h3></td>
       <td><input name="name" type="text" class="input_type" id="name" placeholder="Course Name" required="required" /></td>
     </tr>
 	  <tr>
