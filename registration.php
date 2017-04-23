@@ -111,14 +111,14 @@
     </tr>
 	  <tr>
       <td><h3>Select Course</h3></td>
-      <td><select name="courses_id" class="select_ums" id="courses_id" required>
+      <td><select name="courses_id" class="select_ums">
         <option>Select Course</option>
         <option value="1">CSE</option>
         <option value="2">CE</option>
         <option value="3">ME</option>
         <option value="4">ECE</option>
         <option value="5">EE</option>
-        </select>
+      </select>
       </td>
     </tr>
 	   <tr>
