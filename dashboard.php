@@ -34,9 +34,6 @@ include("session.php"); //include session.php file on all secure pages ?>
 <td width="138"><a href="addcourse.php">
   <h3><font color="#FFFFFF" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">Add Course</font></h3>
 </a></td>
-<td width="140">
-<a href="subject.php">
-<h3><font color="#FFFFFF" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">Add Subject</font></h3></a></td>
 <td width="167">
 <h3>
 <a href="show_result.php"><font color="#FFFFFF" style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">Check Result</font></a></h3></td>
