@@ -46,7 +46,6 @@
       <td><select name="degrees_id" class="select_ums" id="degrees_id">
         <option>Select Degree</option>
         <option value="1">B.Tech</option>
-        <option value="2">B.Pharmacy</option>
       </select></td>
     </tr>
     <tr>
