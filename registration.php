@@ -42,7 +42,7 @@
         $query = "INSERT into `users` (first_name, last_name, email, password, dob, gender, mobile, adhaar_no, address, current_rollno, university_rollno, current_semester, roles_id, courses_id) VALUES ('$first_name', '$last_name', '$email', '".md5($password)."', '$dob', '$gender', '$mobile', '$adhaar_no', '$address', '$current_rollno', '$university_rollno', '$current_semester', '$roles_id', '$courses_id')";
         $result = $con->query($query);
         if($result){
-            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
+            echo "<div class='form'><h1>You are registered successfully.</h1><br/><h1>Click here to </h1><a href='index.php'><h1>Login</h1></a></div>";
         }else{
             //this will show you the error 
             printf("%s\n", $con->error);
