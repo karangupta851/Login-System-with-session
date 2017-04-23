@@ -109,6 +109,18 @@
       <td><h3>University Roll No.</h3></td>
       <td><input type="text" name="university_rollno" placeholder="University Roll no." class="input_type" required="required" /></td>
     </tr>
+	  <tr>
+      <td><h3>Select Course</h3></td>
+      <td><select name="courses_id" class="select_ums" id="courses_id" required>
+        <option>Select Course</option>
+        <option value="1">CSE</option>
+        <option value="2">CE</option>
+        <option value="3">ME</option>
+        <option value="4">ECE</option>
+        <option value="5">EE</option>
+        </select>
+      </td>
+    </tr>
 	   <tr>
       <td><h3>Current Semester</h3></td>
       <td><select name="current_semester" class="select_ums" id="current_semester" required>
