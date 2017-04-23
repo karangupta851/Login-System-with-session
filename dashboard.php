@@ -6,7 +6,7 @@ include("session.php"); //include session.php file on all secure pages ?>
 <head>
 <meta charset="utf-8">
 <title>Welcome Home</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body background="image/6276102062_463b9f4822_b.jpg">
 <div id="main">
