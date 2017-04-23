@@ -40,8 +40,8 @@
 <div id="UpdatePanel1">
   <table align="center" width="100%" border="0" cellspacing="30" cellpadding="0" class="login_tbl">
     <tr>
-      <td height="41"><h3>Exam Name</h3></td>
-      <td><input name="name" type="text" class="input_type" id="name" placeholder="Exam Name" required="required" /></td>
+      <td height="41"><h3>Semester</h3></td>
+      <td><input name="name" type="text" class="input_type" id="name" placeholder="Semester" required="required" /></td>
     </tr>
 	  <tr>
   <td><div class="login_button">
