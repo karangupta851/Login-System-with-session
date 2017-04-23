@@ -45,7 +45,7 @@
       $query .= "INSERT into `student_attendance` (student_id, subjects_id, classes_delivered, classes_attended) VALUES ('$s', '$subjects_id', '$classes_delivered', '$classes_attended');";
     }
       if ($con->multi_query($query) === TRUE) {
-          echo "New records created successfully";
+          echo "New records created successfully</h3><br/>Click here to <a href='dashboard.php'>Dashboard</a>";
       } else {
           echo "Error: " . $query . "<br>" . $con->error;
       }
