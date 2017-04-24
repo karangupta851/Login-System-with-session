@@ -88,6 +88,7 @@
     <input type="image" name="register" id="register" src="add-button-blue-hi.png" alt="register" style="height:80px;width:130px;border-width:0px; " />
   </div></td>
   </tr>
+ 
   </table>
   </div>
 </div>
