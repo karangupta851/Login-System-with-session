@@ -35,7 +35,7 @@
 <div class="login_box" style="margin-left: 370px;">
 <div class="red_box">
 </div>
-<div class="sign_in">Registration Form
+<div class="sign_in">ADD Subject
 </div>
 <form action="" method="post" name="registration">
 <div class="table">
