@@ -44,7 +44,7 @@
 <div class="login_box" style="margin-left: 370px;">
 <div class="red_box">
 </div>
-<div class="sign_in">Attendence
+<div class="sign_in">ADD Result
 </div>
 <form action="" method="post" name="registration">
 <div class="table">
