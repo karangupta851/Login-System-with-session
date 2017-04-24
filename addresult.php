@@ -77,11 +77,11 @@
     </tr>
     <tr>
       <td height="41"><h3>Total Marks </h3></td>
-      <td><input name="total_marks" type="text" class="input_type" id="name" placeholder="Class Delivered" required="required" /></td>
+      <td><input name="total_marks" type="text" class="input_type" id="name" placeholder="Total Marks" required="required" /></td>
     </tr>
 	<tr>
       <td height="41"><h3>Marks Obtain </h3></td>
-      <td><input name="scored_marks" type="text" class="input_type" id="name" placeholder="Class Attended" required="required" /></td>
+      <td><input name="scored_marks" type="text" class="input_type" id="name" placeholder="Scored Marks" required="required" /></td>
     </tr>
 	  <tr>
   <td><div class="login_button">
