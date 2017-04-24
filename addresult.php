@@ -9,13 +9,13 @@
 <?php
 	require('db.php');
     // If form submitted, insert values into the database.
-    if (isset($_REQUEST['email'])){
+    if (isset($_REQUEST['total_marks'])){
 		$student_id = stripslashes($_REQUEST['student_id']); // removes backslashes
 		$student_id = mysqli_real_escape_string($con,$student_id); //escapes special characters in a string
 		$exams_id = stripslashes($_REQUEST['exams_id']);
 		$exams_id = mysqli_real_escape_string($con,$exams_id);
 		$total_marks = stripslashes($_REQUEST['total_marks']);
-		$total_marks = mysqli_real_escape_string($con,$email);
+		$total_marks = mysqli_real_escape_string($con,$total_marks);
 		$scored_marks = stripslashes($_REQUEST['scored_marks']);
 		$scored_marks = mysqli_real_escape_string($con,$scored_marks);
         $query = "INSERT into `student_result_overview` (student_id, exams_id, total_marks, scored_marks) VALUES ('$student_id', '$exams_id', '$total_marks', '$scored_marks')";
