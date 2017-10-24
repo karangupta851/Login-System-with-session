@@ -24,6 +24,7 @@
         }
     }else{
 ?>
+	hello
 <div class="logo">
 <img src="image/logo3.png" />
 </div>
